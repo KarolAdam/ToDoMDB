@@ -80,7 +80,7 @@ $addtitional-colour-two: #DACAB3;
       text-transform: uppercase;
       padding-left: 1vw;
     }
-    li:nth-child(even) {
+    li:nth-child(odd) {
       background-color: $additional-colour-one;
     }
   }
