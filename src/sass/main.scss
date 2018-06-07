@@ -1,0 +1,87 @@
+$primary-colour: #24323D;
+$secondary-colour: #8AAEBE;
+$tertiary-colour: #868C8A;
+$additional-colour-one: #F2E1C7;
+$addtitional-colour-two: #DACAB3;
+@mixin border-box() {
+  box-sizing:border-box;
+}
+@mixin radius() {
+  border-radius: 1rem;
+}
+
+
+#app {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  border: 2px solid $primary-colour;
+  width: 33vw;
+  background-color: $addtitional-colour-two;
+  @include border-box();
+  @include radius();
+  color: $primary-colour;
+
+  .todolist {
+    border-radius: 10px;
+    width: 30vw;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2vh;
+    height: 80vh;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+    margin:2vh 0 2vh 0;
+  }
+  button {
+    text-transform: uppercase;
+    border: 1px solid $primary-colour;
+    @include radius();
+    width: 8vw;
+    background-color: $tertiary-colour;
+  }
+  button:hover {
+      background-color: white;
+  }
+  .list_items {
+    @include border-box();
+    background-color: white;
+    border: 2px solid $primary-colour;
+    @include radius();
+    width: 30vw;
+    height: 73vh;
+    h1 {
+      margin: 0;
+      margin-bottom: 1vh;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+
+  ul {
+    overflow: auto;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    max-height: 68.6vh;
+    overflow-x: hidden;
+
+    li {
+      text-align: left;
+      text-transform: uppercase;
+      padding-left: 1vw;
+    }
+    li:nth-child(even) {
+      background-color: $additional-colour-one;
+    }
+  }
+}
